@@ -11,7 +11,7 @@ public class DiamondKata {
         System.out.println("Welcome to Diamond Kata!");
         DiamondKata diamondKata = new DiamondKata();
         String diamond = diamondKata.diamondGenerator();
-        System.out.println(diamond.toString());
+        System.out.println(diamond);
     }
 
     public String diamondGenerator(){
@@ -32,7 +32,7 @@ public class DiamondKata {
     }
 
     public boolean checkValidInput(String inputLetter){
-        boolean isValidInput = false;
+        boolean isValidInput;
         try {
             if(inputLetter.length()!=1) {
                 System.out.printf("Please enter a single letter:%n");
@@ -68,8 +68,6 @@ public class DiamondKata {
     }
 
     public void addSpaces(StringBuilder diamond, int spaceNum){
-        for (int i = 0; i<spaceNum; i++){
-            diamond.append(" ");
-        }
+        diamond.append(" ".repeat(Math.max(0, spaceNum)));
     }
 }

@@ -13,7 +13,7 @@ public class DiamondKataTest {
 
     @Test
     public void testLetterAMinimum() {
-        String expected = new String("A");
+        String expected = "A";
 
         generateUserInput("A");
         String actual = diamondKata.diamondGenerator();
@@ -27,10 +27,10 @@ public class DiamondKataTest {
 
     @Test
     public void testLetterBUppercase(){
-        String expected = new String(
+        String expected =
                 " A \n" +
                 "B B\n" +
-                " A ");
+                " A ";
 
         generateUserInput("B");
         String actual = diamondKata.diamondGenerator();
@@ -44,10 +44,10 @@ public class DiamondKataTest {
 
     @Test
     public void testLetterBLowercase(){
-        String expected = new String(
+        String expected =
                         " A \n" +
                         "B B\n" +
-                        " A ");
+                        " A ";
 
         generateUserInput("b");
 
@@ -62,7 +62,7 @@ public class DiamondKataTest {
 
     @Test
     public void testLetterM() {
-        String expected = new String(
+        String expected =
                 "            A            \n" +
                 "           B B           \n" +
                 "          C   C          \n" +
@@ -87,7 +87,7 @@ public class DiamondKataTest {
                 "         D     D         \n" +
                 "          C   C          \n" +
                 "           B B           \n" +
-                "            A            ");
+                "            A            ";
 
         generateUserInput("m");
         String actual = diamondKata.diamondGenerator();
@@ -98,7 +98,7 @@ public class DiamondKataTest {
 
     @Test
     public void testLetterZMaximum() {
-        String expected = new String(
+        String expected =
                         "                         A                         \n" +
                         "                        B B                        \n" +
                         "                       C   C                       \n" +
@@ -149,7 +149,7 @@ public class DiamondKataTest {
                         "                      D     D                      \n" +
                         "                       C   C                       \n" +
                         "                        B B                        \n" +
-                        "                         A                         ");
+                        "                         A                         ";
 
         generateUserInput("z");
         String actual = diamondKata.diamondGenerator();
@@ -160,7 +160,7 @@ public class DiamondKataTest {
 
     @Test
     public void testEmptyInput() {
-        String expected = new String();
+        String expected = "";
 
         generateUserInput("");
         ByteArrayOutputStream outputContent = recordOutput();
@@ -173,7 +173,7 @@ public class DiamondKataTest {
 
     @Test
     public void testIncorrectInputMultipleValues() {
-        String expected = new String();
+        String expected = "";
 
         generateUserInput(String.format("aaa", System.lineSeparator()));
         ByteArrayOutputStream outputContent = recordOutput();
@@ -186,7 +186,7 @@ public class DiamondKataTest {
 
     @Test
     public void testIncorrectInputSymbols() {
-        String expected = new String();
+        String expected = "";
 
         generateUserInput(String.format("?", System.lineSeparator()));
         ByteArrayOutputStream outputContent = recordOutput();
@@ -199,7 +199,7 @@ public class DiamondKataTest {
 
     @Test
     public void testIncorrectInputInts() {
-        String expected = new String();
+        String expected = "";
 
         generateUserInput(String.format("1", System.lineSeparator()));
         ByteArrayOutputStream outputContent = recordOutput();
