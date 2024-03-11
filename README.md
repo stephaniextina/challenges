@@ -30,3 +30,7 @@ C   C
  B B
   A
 </pre>
+
+
+
+For future expansions of the application I would discuss with the client what their needs are in order to create ideas for new features I could expand on such as different shapes, different characters or numbers, what will the output be used for, could I create a UI that takes the input in a more user friendly way, and displays the output in a more user friendly way, potentially saving the interactions for future use. 
