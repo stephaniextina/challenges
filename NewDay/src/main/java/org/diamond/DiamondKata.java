@@ -54,9 +54,9 @@ public class DiamondKata {
         int initialSpaceNum = (inputLetterAsInt - 'A');
         for(int i = 0; i <= initialSpaceNum; ++i) {
             StringBuilder diamondLine = new StringBuilder();
-            addSpaces(diamondLine, initialSpaceNum-i);
+            diamondLine.append(" ".repeat(Math.max(0, initialSpaceNum-i)));
             diamondLine.append((char)('A' + i));
-            addSpaces(diamondLine, i);
+            diamondLine.append(" ".repeat(Math.max(0, i)));
             diamondLine.append(new StringBuilder(diamondLine.substring(0, diamondLine.length()-1)).reverse());
             diamond.add(diamondLine);
         }
@@ -67,7 +67,4 @@ public class DiamondKata {
                 .collect(Collectors.joining(System.lineSeparator()));
     }
 
-    public void addSpaces(StringBuilder diamond, int spaceNum){
-        diamond.append(" ".repeat(Math.max(0, spaceNum)));
-    }
 }
